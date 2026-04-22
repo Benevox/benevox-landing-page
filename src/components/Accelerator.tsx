@@ -15,7 +15,7 @@ const steps = [
     icon: FileCode,
     title: "Prep",
     description:
-      "We build their digital presence (Website) and legal foundation.",
+      "We don't just build their website and legal foundation, we help build their social media pages and branding.",
     iconColor: "text-primary",
     bgColor: "bg-primary/10",
   },
@@ -23,7 +23,7 @@ const steps = [
     step: "03",
     icon: Rocket,
     title: "Handover",
-    description: "We deliver migration-ready businesses to Cloud Providers.",
+    description: "We then either hand them over or help them manage it.",
     iconColor: "text-[hsl(var(--brand-red))]",
     bgColor: "bg-[hsl(var(--brand-red)/0.1)]",
   },
@@ -87,7 +87,7 @@ export const Accelerator = () => {
                 {/* Content */}
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-mono text-muted-foreground">
+                    <span className="text-lg font-mono font-bold text-muted-foreground">
                       {step.step}
                     </span>
                     <h3 className="text-xl font-bold">{step.title}</h3>

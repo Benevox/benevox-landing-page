@@ -1,5 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { ModelsSummary } from "@/components/ModelsSummary";
+import { EngagementModels } from "@/components/EngagementModels";
+import { AIOperationsLayer } from "@/components/AIOperationsLayer";
+import { OperationalGuardrails } from "@/components/OperationalGuardrails";
 import { Services } from "@/components/Services";
 import { Capabilities } from "@/components/Capabilities";
 import { Accelerator } from "@/components/Accelerator";
@@ -13,6 +17,10 @@ const Index = () => {
     <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
+      <ModelsSummary />
+      <EngagementModels />
+      <AIOperationsLayer />
+      <OperationalGuardrails />
       <Services />
       <Capabilities />
       <Accelerator />

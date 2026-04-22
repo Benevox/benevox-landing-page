@@ -43,12 +43,19 @@ export const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Benevox connects you to an elite network of African talent to build
-            world-class technical solutions.{" "}
+            World-class software delivery through a high-discipline production machine—without the management overhead.
+            <br />
             <span className="text-foreground font-medium">
-              No babysitting, just delivery.
+              A plug-in system for experienced dev teams, structured product processes, and reliable delivery pipelines.
             </span>
           </p>
+
+          {/* Validation System */}
+          <div className="bg-muted/50 rounded-lg p-6 mb-10 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.25s" }}>
+            <p className="text-sm text-muted-foreground">
+              <strong>Closed-loop validation system:</strong> No commitment is made to a client until the technical team has verified feasibility.
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div
@@ -56,11 +63,11 @@ export const Hero = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <Button variant="hero" size="xl">
-              Start Your Project
+              Book a Discovery Call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="hero-outline" size="xl">
-              Watch How It Works
+              Request a Technical Scoping
               <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
           </div>

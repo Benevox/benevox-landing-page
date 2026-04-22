@@ -48,6 +48,20 @@ export const Contact = () => {
             </p>
           </div>
 
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-6 mb-8">
+            <div className="text-center">
+              <h3 className="text-lg font-bold mb-2">For Individuals & Small Businesses</h3>
+              <p className="text-muted-foreground mb-4">
+                Have an idea but not sure where to start?
+              </p>
+              <Button variant="hero" size="lg">
+                Free 10-minute consultation to launch your idea
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
           {/* Progress Bar */}
           <div className="flex gap-2 mb-10">
             {[1, 2, 3, 4].map((s) => (

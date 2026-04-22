@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="py-16 border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <BenevoxLogo className="h-10 mb-4" />
@@ -29,22 +29,73 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Resources */}
           <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+            <h4 className="font-bold mb-4">Resources</h4>
             <ul className="space-y-3">
-              {["Services", "Our Work", "Accelerator", "About", "Careers"].map(
-                (link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase().replace(" ", "-")}`}
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                )
-              )}
+              <li>
+                <a
+                  href="/models"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Engagement Models
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/ops-and-security"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  How We Work
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Our Works
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#accelerator"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Accelerator
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-bold mb-4">Company</h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="/careers"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/ops-and-security"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Security & Compliance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  About Us
+                </a>
+              </li>
             </ul>
           </div>
 

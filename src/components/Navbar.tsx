@@ -4,9 +4,11 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { BenevoxLogo } from "@/components/BenevoxLogo";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Our Work", href: "#portfolio" },
+  { name: "Engagement Models", href: "/models" },
+  { name: "How We Work", href: "/ops-and-security" },
+  { name: "Our Works", href: "#portfolio" },
   { name: "Accelerator", href: "#accelerator" },
+  { name: "Careers", href: "/careers" },
   { name: "About", href: "#about" },
 ];
 

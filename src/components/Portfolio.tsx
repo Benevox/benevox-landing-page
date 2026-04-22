@@ -6,8 +6,8 @@ const projects = [
     type: "Government / Agri-Tech",
     project: "DashCom",
     description:
-      "An IoT dashboard for analyzing agricultural sensor data, enabling data-driven agriculture nationwide.",
-    impact: "Enabled data-driven agriculture nationwide",
+      "IoT-enabled dashboard for nationwide data-driven agriculture, processing real-time sensor data from agricultural installations across the country.",
+    impact: "Nationwide agricultural data platform",
     accentColor: "bg-primary",
     dotColor: "bg-primary",
   },
@@ -16,18 +16,18 @@ const projects = [
     type: "Media / Streaming",
     project: "Video Platform",
     description:
-      "A full video encoding engine and streaming backend with Netflix-style architecture.",
-    impact: "Full streaming platform capabilities",
+      "Full video encoding engine capable of Netflix-style backend processing and smooth streaming, handling complex video workflows at scale.",
+    impact: "Enterprise-grade streaming infrastructure",
     accentColor: "bg-[hsl(var(--brand-red))]",
     dotColor: "bg-[hsl(var(--brand-red))]",
   },
   {
     client: "Storipod",
     type: "Social / Tech",
-    project: "Team-as-a-Service",
+    project: "Engineering Squads",
     description:
-      "Provided engineering talent and product structure, scaling their workforce.",
-    impact: "Scaled without hiring stress",
+      "Engineering Squads model for scaling existing workforces without stress, providing structured development teams and product processes.",
+    impact: "Seamless workforce scaling",
     accentColor: "bg-[hsl(var(--brand-gold))]",
     dotColor: "bg-[hsl(var(--brand-gold))]",
   },
@@ -50,14 +50,13 @@ export const Portfolio = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="text-[hsl(var(--brand-red))] font-semibold tracking-wider uppercase text-sm">
-            Our Work
+            Our Works
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Companies We've Worked With
+            Technical Impact at Scale
           </h2>
           <p className="text-muted-foreground text-lg">
-            From government agencies to fast-growing startups, we deliver
-            results.
+            Real-world solutions built for enterprise challenges and national infrastructure.
           </p>
         </div>
 
