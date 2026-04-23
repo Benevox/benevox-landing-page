@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/organisms/Navbar";
+import { Footer } from "@/components/organisms/Footer";
+import { Button } from "@/components/atoms/ui/button";
 import { Search, FileCode, Rocket, ArrowRight } from "lucide-react";
 
 const steps = [

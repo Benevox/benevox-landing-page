@@ -1,14 +1,9 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { PlugInSystem } from "@/components/PlugInSystem";
-import { ValidationRule } from "@/components/ValidationRule";
-import { ModelsSummary } from "@/components/ModelsSummary";
-import { AIOperationsLayer } from "@/components/AIOperationsLayer";
-import { OperationalGuardrails } from "@/components/OperationalGuardrails";
-import { Services } from "@/components/Services";
-import { Capabilities } from "@/components/Capabilities";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/organisms/Navbar";
+import { Hero } from "@/components/organisms/Hero";
+import { PlugInSystem } from "@/components/organisms/PlugInSystem";
+import { ValidationRule } from "@/components/organisms/ValidationRule";
+import { ModelsSummary } from "@/components/organisms/ModelsSummary";
+import { Footer } from "@/components/organisms/Footer";
 
 const Index = () => {
   return (
@@ -18,11 +13,6 @@ const Index = () => {
       <PlugInSystem />
       <ValidationRule />
       <ModelsSummary />
-      <AIOperationsLayer />
-      <OperationalGuardrails />
-      <Services />
-      <Capabilities />
-      <Contact />
       <Footer />
     </main>
   );
