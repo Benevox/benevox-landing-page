@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/", // Set this to root
+  base: "/", // This ensures assets are loaded from the root domain
   server: {
     host: "::",
     port: 8080,
