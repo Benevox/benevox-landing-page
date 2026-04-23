@@ -26,7 +26,7 @@ export const Hero = () => {
 
           {/* Subheadline & Tagline */}
           <div
-            className="max-w-3xl mx-auto mb-12 animate-slide-up"
+            className="max-w-3xl mx-auto mb-8 animate-slide-up"
             style={{ animationDelay: "0.15s" }}
           >
             <h2 className="text-2xl md:text-4xl font-bold mb-4">
@@ -37,16 +37,7 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            <Button size="xl" className="text-lg px-10 py-8 h-auto font-bold">
-              Book a Technical Scoping
-              <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
-          </div>
+
         </div>
       </div>
 

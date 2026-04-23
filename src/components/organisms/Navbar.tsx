@@ -101,8 +101,8 @@ export const Navbar = () => {
               <Moon className="h-5 w-5 text-foreground" />
             )}
           </button>
-          <Button variant="hero" size="lg">
-            Book a Technical Scoping
+          <Button variant="hero" size="lg" asChild>
+            <a href="https://calendar.app.google/S8y9f3ErZXRSbfc99">Book a Technical Scoping</a>
           </Button>
         </div>
 
@@ -156,8 +156,8 @@ export const Navbar = () => {
                 </div>
               </div>
             ))}
-            <Button variant="hero" className="mt-4">
-              Book a Technical Scoping
+            <Button variant="hero" className="mt-4" asChild>
+              <a href="https://calendar.app.google/S8y9f3ErZXRSbfc99">Book a Technical Scoping</a>
             </Button>
           </div>
         </div>

@@ -8,8 +8,10 @@ export const Footer = () => {
         <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <BenevoxLogo className="h-10 mb-4" />
-            <p className="text-muted-foreground max-w-md mb-6">
+            <div className="flex items-center">
+              <BenevoxLogo className="h-10" />
+            </div>
+            <p className="text-muted-foreground max-w-md mb-6 mt-4">
               Your Product, Our Team. We Build, Ship, and Handover. Connecting
               you to Africa's elite tech talent.
             </p>
@@ -105,7 +107,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                solutions@benevox.com
+                contact@benevox.africa
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="h-4 w-4 text-[hsl(var(--brand-gold))]" />

@@ -46,9 +46,9 @@ const OpsAndSecurity = () => {
               <Scale className="h-10 w-10 text-brand-green" />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4">95/5 Quality Holdback</h2>
+              <h2 className="text-3xl font-bold mb-4"> 70/30 Quality Holdback</h2>
               <p className="text-xl text-foreground/80 leading-relaxed mb-6">
-                Our team payout logic is built on accountability. We hold back 5% of the total milestone payout until 30 days post-handover to ensure zero technical debt and absolute stability.
+                Our team payout logic is built on accountability. We hold back 30% of the total milestone payout until 30 days post-handover to ensure zero technical debt and absolute stability.
               </p>
               <div className="flex gap-4">
                 <div className="px-4 py-2 bg-brand-green/10 rounded-lg text-brand-green font-bold text-sm">ZERO DEBT</div>

@@ -27,13 +27,6 @@ export const ValidationRule = () => {
                 <p className="text-lg text-muted-foreground mb-10">
                   Every scope is an architecture decision. Every timeline is verified. Every deliverable is tested.
                 </p>
-
-                <Button size="xl" className="h-auto py-5 px-10 text-xl font-bold" asChild>
-                  <a href="/ops-and-security">
-                    Book a Technical Scoping
-                    <ArrowRight className="ml-3 h-6 w-6" />
-                  </a>
-                </Button>
               </div>
             </div>
           </div>

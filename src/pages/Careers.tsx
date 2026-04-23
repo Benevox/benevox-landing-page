@@ -90,7 +90,7 @@ const Careers = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
              <Button size="xl" className="px-10 h-16 text-lg font-bold">Apply for Internship</Button>
-             <Button size="xl" variant="outline" className="px-10 h-16 text-lg font-bold">Book a Technical Scoping</Button>
+             <Button size="xl" variant="outline" className="px-10 h-16 text-lg font-bold" asChild><a href="https://calendar.app.google/S8y9f3ErZXRSbfc99">Book a Technical Scoping</a></Button>
           </div>
         </div>
       </section>

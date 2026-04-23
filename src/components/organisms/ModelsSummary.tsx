@@ -55,9 +55,11 @@ export const ModelsSummary = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <Button size="xl" className="h-auto py-5 px-10 text-xl font-bold">
-            Book a Technical Scoping
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="xl" className="h-auto py-5 px-10 text-xl font-bold" asChild>
+            <a href="https://calendar.app.google/S8y9f3ErZXRSbfc99">
+              Book a Technical Scoping
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
           </Button>
         </div>
       </div>
