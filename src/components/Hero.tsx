@@ -44,16 +44,12 @@ export const Hero = () => {
             style={{ animationDelay: "0.2s" }}
           >
             World-class software delivery through a high-discipline production machine—without the management overhead.
-            <br />
-            <span className="text-foreground font-medium">
-              A plug-in system for experienced dev teams, structured product processes, and reliable delivery pipelines.
-            </span>
           </p>
 
           {/* Validation System */}
           <div className="bg-muted/50 rounded-lg p-6 mb-10 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.25s" }}>
             <p className="text-sm text-muted-foreground">
-              <strong>Closed-loop validation system:</strong> No commitment is made to a client until the technical team has verified feasibility.
+              <strong>Validation First:</strong> No promise is made until our technical team verifies feasibility. This is non-negotiable.
             </p>
           </div>
 
@@ -63,11 +59,11 @@ export const Hero = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <Button variant="hero" size="xl">
-              Book a Discovery Call
+              Book a Technical Scoping
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="hero-outline" size="xl">
-              Request a Technical Scoping
+              Free 10-Minute Consultation
               <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
           </div>

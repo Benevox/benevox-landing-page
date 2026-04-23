@@ -4,12 +4,13 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { BenevoxLogo } from "@/components/BenevoxLogo";
 
 const navLinks = [
+  { name: "Home", href: "/" },
   { name: "Engagement Models", href: "/models" },
   { name: "How We Work", href: "/ops-and-security" },
-  { name: "Our Works", href: "#portfolio" },
-  { name: "Accelerator", href: "#accelerator" },
+  { name: "Our Works", href: "/portfolio" },
+  { name: "Accelerator", href: "/accelerator" },
   { name: "Careers", href: "/careers" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/about" },
 ];
 
 export const Navbar = () => {
@@ -37,7 +38,7 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <BenevoxLogo />
         </a>
 

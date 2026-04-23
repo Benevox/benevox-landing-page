@@ -51,7 +51,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#portfolio"
+                  href="/portfolio"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Our Works
@@ -59,7 +59,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#accelerator"
+                  href="/accelerator"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Accelerator
@@ -90,7 +90,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#about"
+                  href="/about"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   About Us
