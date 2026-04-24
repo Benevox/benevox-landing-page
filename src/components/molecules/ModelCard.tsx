@@ -1,4 +1,5 @@
 import { LucideIcon, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/atoms/ui/button";
 
 interface ModelCardProps {
@@ -31,10 +32,10 @@ export const ModelCard = ({ name, subtitle, description, icon: Icon, color, bgCo
       className="w-full group h-auto py-4 font-bold"
       asChild
     >
-      <a href="/models" className="flex items-center justify-center gap-2">
+      <Link to="/models" className="flex items-center justify-center gap-2">
         Learn More
         <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-      </a>
+      </Link>
     </Button>
   </div>
 );

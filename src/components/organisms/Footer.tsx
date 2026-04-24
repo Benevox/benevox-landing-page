@@ -1,4 +1,5 @@
 import { Mail, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 import { BenevoxLogo } from "@/components/atoms/BenevoxLogo";
 
 export const Footer = () => {
@@ -36,36 +37,36 @@ export const Footer = () => {
             <h4 className="font-bold mb-4">Resources</h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="/models"
+                <Link
+                  to="/models"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Engagement Models
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/ops-and-security"
+                <Link
+                  to="/ops-and-security"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   How We Work
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/portfolio"
+                <Link
+                  to="/portfolio"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Our Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/accelerator"
+                <Link
+                  to="/accelerator"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Accelerator
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -75,28 +76,28 @@ export const Footer = () => {
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="/careers"
+                <Link
+                  to="/careers"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/ops-and-security"
+                <Link
+                  to="/ops-and-security"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Security & Compliance
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

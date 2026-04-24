@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/atoms/ui/button";
 import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
 import { BenevoxLogo } from "@/components/atoms/BenevoxLogo";
@@ -60,9 +61,9 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <BenevoxLogo />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -75,12 +76,12 @@ export const Navbar = () => {
               <DropdownMenuContent className="bg-card/95 backdrop-blur-xl border-border p-2 min-w-[200px]">
                 {group.items.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="w-full px-4 py-2 text-sm hover:bg-brand-green/10 hover:text-brand-green rounded-md transition-colors cursor-pointer"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -144,14 +145,14 @@ export const Navbar = () => {
                 </h4>
                 <div className="flex flex-col gap-2">
                   {group.items.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="text-foreground hover:text-brand-green transition-colors py-2 px-2 font-medium"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
