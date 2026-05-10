@@ -164,7 +164,11 @@ export const Navbar = () => {
               </div>
             ))}
             <Button variant="hero" className="mt-4" asChild>
-              <a href="https://calendar.app.google/S8y9f3ErZXRSbfc99">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdzmEVFuly6CHwREg4utCe2GY538E3SQ0SPUBGEHOdqwCAJ6Q/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Book a Technical Scoping
               </a>
             </Button>
