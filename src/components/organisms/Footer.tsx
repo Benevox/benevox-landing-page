@@ -25,29 +25,29 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
-                // target="_blank"
-                // rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/benevox-africa-274054409"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 // target="_blank"
                 // rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 // target="_blank"
                 // rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
