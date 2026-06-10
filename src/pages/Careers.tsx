@@ -136,7 +136,7 @@ const Careers = () => {
               asChild
             >
               <a
-                href="https://forms.gle/skdDG4U8EgNwHXvB9"
+                href="https://forms.gle/xBQkpDVTeBL2YrTS9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
