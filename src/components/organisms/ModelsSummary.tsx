@@ -65,7 +65,7 @@ export const ModelsSummary = () => {
             asChild
           >
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdzmEVFuly6CHwREg4utCe2GY538E3SQ0SPUBGEHOdqwCAJ6Q/viewform"
+              href="https://forms.gle/xBQkpDVTeBL2YrTS9"
               target="_blank"
               rel="noopener noreferrer"
             >
