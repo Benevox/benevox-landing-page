@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import { Database, Cpu, Users } from "lucide-react";
+import { Database, Activity, Network } from "lucide-react";
 
 const Portfolio = () => {
   const projects = [
@@ -14,22 +14,22 @@ const Portfolio = () => {
       icon: Database,
     },
     {
-      title: "Mabi",
-      tagline: "Video Encoding Engine",
-      description: "High-performance video processing and encoding pipeline for smooth, adaptive bitrate streaming at scale.",
-      impact: "30% Efficiency Increase",
-      outcome: "Implemented a full Netflix-style video encoding engine for smooth streaming under low-bandwidth conditions.",
-      tech: ["C++", "FFmpeg", "AWS Elemental", "Node.js"],
-      icon: Cpu,
+      title: "Bellcrest Family Clinic",
+      tagline: "UI/UX Modernization & Technical SEO Engine",
+      description: "Overhauling an established clinical digital footprint to enhance patient intake and service discovery.",
+      impact: "14-Day Turnaround",
+      outcome: "Injected deep on-page semantic SEO tags combined with local map directory indexing to skyrocket local organic client capture.",
+      tech: ["Semantic SEO", "UI/UX Architecture", "WCAG Accessibility", "Map Indexing"],
+      icon: Activity,
     },
     {
-      title: "Storipod",
-      tagline: "Engineering Squads",
-      description: "Scalable team augmentation for rapid feature development and platform stabilization.",
-      impact: "30% Efficiency Increase",
-      outcome: "Scaled internal workforces without management stress through our precision-plugged engineering pods.",
-      tech: ["Next.js", "GraphQL", "Python", "Kubernetes"],
-      icon: Users,
+      title: "Alder Family Clinic",
+      tagline: "Edge Routing & Cloud Multi-Tenancy",
+      description: "Deploying an app-level system for zero-downtime disaster recovery and multi-subdomain routing on constrained infrastructure.",
+      impact: "Zero-Downtime DNS",
+      outcome: "Decoupled DNS from traditional hosting by engineering a Cloudflare-First Proxy Architecture with dynamic edge redirect rules.",
+      tech: ["Cloudflare Edge", "DNS Routing", "SSL/TLS", "Regex Pattern Matching"],
+      icon: Network,
     },
   ];
 
