@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import { Database, Activity, Network } from "lucide-react";
+import { Database, Activity, Network, ExternalLink } from "lucide-react";
+import { Button } from "@/components/atoms/ui/button";
 
 const Portfolio = () => {
   const projects = [
@@ -21,6 +22,9 @@ const Portfolio = () => {
       outcome: "Injected deep on-page semantic SEO tags combined with local map directory indexing to skyrocket local organic client capture.",
       tech: ["Semantic SEO", "UI/UX Architecture", "WCAG Accessibility", "Map Indexing"],
       icon: Activity,
+      url: "https://bellcrestfamilyclinic.ca/",
+      logo: "/assets/portfolio/bellcrest-logo.avif",
+      image: "/assets/portfolio/bellcrest-hero.jpg",
     },
     {
       title: "Alder Family Clinic",
@@ -30,6 +34,9 @@ const Portfolio = () => {
       outcome: "Decoupled DNS from traditional hosting by engineering a Cloudflare-First Proxy Architecture with dynamic edge redirect rules.",
       tech: ["Cloudflare Edge", "DNS Routing", "SSL/TLS", "Regex Pattern Matching"],
       icon: Network,
+      url: "https://alderfamilyclinic.ca/",
+      logo: "/assets/portfolio/alder-logo.png",
+      image: "/assets/portfolio/alder-hero.jpg",
     },
   ];
 
@@ -54,7 +61,11 @@ const Portfolio = () => {
                 <div className="p-10 lg:p-16 flex-1">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="p-3 rounded-xl bg-brand-green/10">
-                      <project.icon className="h-6 w-6 text-brand-green" />
+                      {project.logo ? (
+                        <img src={project.logo} alt={`${project.title} logo`} className="h-6 w-6 object-contain" />
+                      ) : (
+                        <project.icon className="h-6 w-6 text-brand-green" />
+                      )}
                     </div>
                     <div>
                       <h2 className="text-3xl font-black">{project.title}</h2>
@@ -72,21 +83,44 @@ const Portfolio = () => {
                     <p className="text-foreground/80 italic">"{project.outcome}"</p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <span key={t} className="px-3 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium">
-                        {t}
-                      </span>
-                    ))}
+                  <div className="flex flex-wrap items-center justify-between gap-6">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((t) => (
+                        <span key={t} className="px-3 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    {project.url && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="rounded-full border-brand-green/20 hover:border-brand-green/50 text-brand-green gap-2"
+                        onClick={() => window.open(project.url, '_blank')}
+                      >
+                        Visit Website
+                        <ExternalLink className="h-3 w-3" />
+                      </Button>
+                    )}
                   </div>
                 </div>
 
-                <div className="lg:w-[40%] bg-muted/30 border-l border-border flex items-center justify-center p-12 relative overflow-hidden">
-                   <project.icon className="w-64 h-64 text-foreground/5 absolute -right-16 -bottom-16" />
-                   <div className="relative z-10 text-center">
-                     <p className="text-sm font-bold uppercase tracking-widest mb-4 opacity-50">Confidentiality: Tier 1</p>
-                     <p className="text-muted-foreground text-sm max-w-[200px]">Technical architecture details available under NDA for scoping sessions.</p>
-                   </div>
+                <div className="lg:w-[40%] bg-muted/30 border-l border-border flex items-center justify-center relative overflow-hidden">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  ) : (
+                    <>
+                      <project.icon className="w-64 h-64 text-foreground/5 absolute -right-16 -bottom-16" />
+                      <div className="relative z-10 text-center p-12">
+                        <p className="text-sm font-bold uppercase tracking-widest mb-4 opacity-50">Confidentiality: Tier 1</p>
+                        <p className="text-muted-foreground text-sm max-w-[200px]">Technical architecture details available under NDA for scoping sessions.</p>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
