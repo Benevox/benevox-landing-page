@@ -3,6 +3,7 @@ import { Hero } from "@/components/organisms/Hero";
 import { PlugInSystem } from "@/components/organisms/PlugInSystem";
 import { ValidationRule } from "@/components/organisms/ValidationRule";
 import { ModelsSummary } from "@/components/organisms/ModelsSummary";
+import { Campaign } from "@/components/organisms/Campaign";
 import { Footer } from "@/components/organisms/Footer";
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
     <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
+      <Campaign />
       <PlugInSystem />
       <ValidationRule />
       <ModelsSummary />

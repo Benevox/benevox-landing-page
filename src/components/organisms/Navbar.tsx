@@ -25,6 +25,7 @@ const navigation = [
       { name: "Portfolio", href: "/portfolio" },
       { name: "Technical Capabilities", href: "/portfolio" },
       { name: "Accelerator", href: "/accelerator" },
+      { name: "Campaign", href: "/campaign" },
     ],
   },
   {
@@ -59,7 +60,7 @@ export const Navbar = () => {
         isScrolled ? "glass py-3" : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="md:container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <BenevoxLogo />

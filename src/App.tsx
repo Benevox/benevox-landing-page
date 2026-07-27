@@ -10,6 +10,7 @@ import OpsAndSecurity from "./pages/OpsAndSecurity";
 import Accelerator from "./pages/Accelerator";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
+import Campaign from "./pages/Campaign";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/accelerator" element={<Accelerator />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/about" element={<About />} />
+          <Route path="/campaign" element={<Campaign />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
