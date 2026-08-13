@@ -4,7 +4,6 @@ import { PlugInSystem } from "@/components/organisms/PlugInSystem";
 import { HowItWorks } from "@/components/organisms/HowItWorks";
 import { RecentProjects } from "@/components/organisms/RecentProjects";
 import { WhyUs } from "@/components/organisms/WhyUs";
-import { ValidationRule } from "@/components/organisms/ValidationRule";
 import { ModelsSummary } from "@/components/organisms/ModelsSummary";
 import { Footer } from "@/components/organisms/Footer";
 
@@ -17,7 +16,6 @@ const Index = () => {
       <HowItWorks />
       <RecentProjects />
       <WhyUs />
-      <ValidationRule />
       <ModelsSummary />
       <Footer />
     </main>

@@ -1,4 +1,4 @@
-import { Shield, Zap, DollarSign, Globe, Star } from "lucide-react";
+import { Shield, Zap, DollarSign, Globe } from "lucide-react";
 
 const valueProps = [
   {
@@ -27,26 +27,13 @@ const valueProps = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Benevox solved our team-scaling issues overnight. They stood up a complete delivery pod with a Product Manager, senior developers, and QA within a week. The weekly sprint payouts kept everyone aligned and high-performing.",
-    author: "Marc Dupond",
-    role: "VP of Engineering, European Logistics Platform",
-  },
-  {
-    quote: "As a startup founder, I couldn't risk unvalidated timelines. Their Validation Rule meant we knew exactly what was feasible before we spent a dime. The edge cloud architecture they built works perfectly.",
-    author: "Elena Rostov",
-    role: "Co-Founder & CTO, FinTech Accelerator App",
-  },
-];
-
 export const WhyUs = () => {
   return (
     <section className="py-24 bg-background border-t border-border relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
 
         {/* Why Us Section */}
-        <div className="grid lg:grid-cols-12 gap-16 items-center mb-32 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-16 items-center max-w-6xl mx-auto">
           {/* Text/Benefits */}
           <div className="lg:col-span-5">
             <span className="text-brand-green font-bold uppercase tracking-widest text-sm mb-4 block">
@@ -84,42 +71,6 @@ export const WhyUs = () => {
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-foreground">{prop.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{prop.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Social Proof / Testimonials Section */}
-        <div className="max-w-4xl mx-auto border-t border-border pt-24">
-          <div className="text-center mb-16">
-            <span className="text-brand-red font-bold uppercase tracking-widest text-sm mb-4 block">
-              Global Trust
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">
-              What Leaders Say
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testi, idx) => (
-              <div
-                key={idx}
-                className="p-8 rounded-2xl border border-border bg-card/50 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex gap-1 mb-6 text-brand-gold">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground italic leading-relaxed mb-6 text-sm">
-                    "{testi.quote}"
-                  </p>
-                </div>
-                <div className="border-t border-border pt-4 mt-auto">
-                  <p className="font-bold text-foreground text-sm">{testi.author}</p>
-                  <p className="text-xs text-muted-foreground">{testi.role}</p>
-                </div>
               </div>
             ))}
           </div>
