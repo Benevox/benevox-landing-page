@@ -104,11 +104,11 @@ export const Navbar = () => {
           </button>
           <Button variant="hero" size="lg" asChild>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdzmEVFuly6CHwREg4utCe2GY538E3SQ0SPUBGEHOdqwCAJ6Q/viewform"
+              href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a Technical Scoping
+              Book a 30-min Call
             </a>
           </Button>
         </div>
@@ -165,11 +165,11 @@ export const Navbar = () => {
             ))}
             <Button variant="hero" className="mt-4" asChild>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdzmEVFuly6CHwREg4utCe2GY538E3SQ0SPUBGEHOdqwCAJ6Q/viewform"
+                href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book a Technical Scoping
+                Book a 30-min Call
               </a>
             </Button>
           </div>

@@ -2,8 +2,8 @@ import {
   Mail,
   MapPin,
   Linkedin,
-  Twitter,
   Instagram,
+  Phone,
   Facebook,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -25,20 +25,12 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/benevox-africa-274054409"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="https://x.com/benevoxhq"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="https://www.instagram.com/benevoxhq?igsh=emN5cTl2aXV4OHlt"
@@ -49,7 +41,7 @@ export const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://web.facebook.com/profile.php?id=61590308837951#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -97,7 +89,6 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h4 className="font-bold mb-4">Company</h4>
@@ -128,7 +119,6 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-
           {/* Contact */}
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
@@ -140,6 +130,15 @@ export const Footer = () => {
                   className="hover:text-foreground transition-colors"
                 >
                   info@benevox.africa
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Phone className="h-4 w-4 text-primary" />
+                <a
+                  href="tel:+2348106714878"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Call Us
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">

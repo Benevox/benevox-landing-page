@@ -1,5 +1,5 @@
 import { Button } from "@/components/atoms/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Users } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -8,36 +8,69 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 border border-brand-green/20 mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/20 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
-            <span className="text-xs font-medium uppercase tracking-wider text-brand-green">
-              High-Discipline Software Production
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-green">
+              Teams-as-a-Service (TaaS)
             </span>
           </div>
 
           {/* Headline */}
           <h1
-            className="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-8 animate-slide-up tracking-tighter"
+            className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 animate-slide-up tracking-tighter text-foreground"
             style={{ animationDelay: "0.1s" }}
           >
-            Your Product, <br className="hidden md:block" />
-            <span className="text-brand-green">Our Team.</span>
+            Need world-class <br className="hidden md:block" />
+            engineering teams <span className="text-brand-green">without hiring?</span>
           </h1>
 
-          {/* Subheadline & Tagline */}
+          {/* Subheadline & Description */}
           <div
-            className="max-w-3xl mx-auto mb-8 animate-slide-up"
+            className="max-w-3xl mx-auto mb-12 animate-slide-up"
             style={{ animationDelay: "0.15s" }}
           >
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
-              We Build, Ship, and Handover.
-            </h2>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              World-class software delivery through a high-discipline production machine—without the management overhead.
+              We assemble, manage, and deliver custom solutions in weeks, not months.
+              Get your dedicated software production pod on a highly disciplined pipeline.
             </p>
           </div>
 
-
+          {/* Dual CTAs */}
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <Button
+              variant="hero"
+              size="lg"
+              className="w-full sm:w-auto h-auto py-4 px-8 text-base font-bold flex items-center gap-2"
+              asChild
+            >
+              <a
+                href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Calendar className="h-5 w-5" />
+                Get a free 30-min architecture review
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto h-auto py-4 px-8 text-base font-bold border-brand-green/30 hover:border-brand-green text-foreground hover:bg-brand-green/5 flex items-center gap-2"
+              asChild
+            >
+              <a
+                href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Users className="h-5 w-5 text-brand-green" />
+                Schedule a discovery call
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
 
