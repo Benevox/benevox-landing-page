@@ -1,140 +1,111 @@
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import { Zap, Eye, Shield } from "lucide-react";
-
-const values = [
-  {
-    icon: Shield,
-    title: "Ownership",
-    quote: "If it's yours, it's yours.",
-    description:
-      "We take full responsibility for every project. Your success is our success.",
-    iconColor: "text-primary",
-    bgColor: "bg-primary/10",
-    quoteColor: "text-primary",
-  },
-  {
-    icon: Zap,
-    title: "Speed",
-    quote: "Ship fast, learn fast.",
-    description:
-      "We move quickly without sacrificing quality. Time is your most valuable resource.",
-    iconColor: "text-[hsl(var(--brand-gold))]",
-    bgColor: "bg-[hsl(var(--brand-gold)/0.1)]",
-    quoteColor: "text-[hsl(var(--brand-gold))]",
-  },
-  {
-    icon: Eye,
-    title: "Transparency",
-    quote: "No hiding problems.",
-    description:
-      "Clear communication, honest updates. You always know where your project stands.",
-    iconColor: "text-[hsl(var(--brand-red))]",
-    bgColor: "bg-[hsl(var(--brand-red)/0.1)]",
-    quoteColor: "text-[hsl(var(--brand-red))]",
-  },
-];
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div style={{
+      background: "hsl(var(--home-bg))", color: "hsl(var(--home-fg))",
+      fontFamily: "'Inter',sans-serif", minHeight: "100vh", position: "relative",
+    }}>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="py-24 bg-card/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-[hsl(var(--brand-brown))] font-semibold tracking-wider uppercase text-sm">
-              About Benevox
-            </span>
-            <h1 className="text-3xl md:text-6xl font-bold mt-4 mb-6">
-              Building Africa's Tech Future
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're a team of engineers, entrepreneurs, and innovators committed to solving African problems through technology and disciplined execution.
+      {/* Blob */}
+      <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
+        <div className="bvx-blob-1" style={{
+          position: "absolute", top: -100, right: -120, width: 420, height: 420,
+          borderRadius: "50%", background: "hsl(30 60% 45% / 0.12)", filter: "blur(90px)",
+        }} />
+      </div>
+
+      {/* Hero */}
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "96px 32px 64px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <h1 style={{ font: "800 clamp(32px,5vw,52px)/1.2 Inter", letterSpacing: "-0.03em", margin: "0 0 20px" }}>
+          Building Africa's{" "}
+          <span style={{ fontFamily: "'Newsreader',serif", fontStyle: "italic", fontWeight: 600, color: "hsl(142 45% 38%)" }}>
+            tech future
+          </span>
+        </h1>
+        <p style={{ font: "400 17px/1.6 Inter", color: "hsl(var(--home-muted))", maxWidth: 560, margin: "0 auto" }}>
+          We're engineers and entrepreneurs who got tired of watching good African businesses lose to bad software. So we fixed that.
+        </p>
+      </div>
+
+      {/* Content */}
+      <div className="reveal bvx-about-grid" style={{
+        maxWidth: 1080, margin: "0 auto", padding: "0 32px 120px",
+        position: "relative", zIndex: 1,
+        display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 56,
+      }}>
+        {/* Founder */}
+        <div>
+          <h2 style={{ font: "700 clamp(22px,3vw,28px)/1.3 Inter", letterSpacing: "-0.02em", margin: "0 0 24px" }}>
+            Meet our founder
+          </h2>
+          <div style={{ background: "hsl(var(--home-card))", borderRadius: 24, padding: 32 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
+              {/* Founder photo placeholder */}
+              <div style={{
+                width: 60, height: 60, borderRadius: "50%", flexShrink: 0,
+                background: "hsl(142 55% 45% / 0.2)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                font: "700 20px/1 'Newsreader',serif", color: "hsl(142 45% 38%)",
+              }}>
+                EP
+              </div>
+              <div>
+                <h3 style={{ font: "700 17px/1.3 Inter", margin: 0 }}>Eno Peter</h3>
+                <p style={{ font: "500 13px/1 Inter", color: "hsl(var(--home-muted))", margin: "6px 0 0" }}>
+                  Founder & Technical Lead
+                </p>
+              </div>
+            </div>
+            <p style={{ font: "400 14px/1.65 Inter", color: "hsl(var(--home-muted))", margin: "0 0 14px" }}>
+              Senior DevOps Engineer, Google Community Lead, and serial entrepreneur focused on solving African problems through technology.
+            </p>
+            <p style={{ font: "400 14px/1.65 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>
+              He's spent years building and scaling technical teams. He started Benevox to close the gap between African talent and global opportunity, and he's still closing it.
             </p>
           </div>
         </div>
-      </section>
 
-      {/* Leadership & Values */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left - Founder */}
-            <div>
-              <span className="text-[hsl(var(--brand-brown))] font-semibold tracking-wider uppercase text-sm">
-                Leadership
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-8">
-                Meet Our Founder
-              </h2>
-
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-[hsl(var(--brand-gold))] flex items-center justify-center text-2xl font-bold text-background">
-                    EP
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">Eno Peter</h3>
-                    <p className="text-muted-foreground">
-                      Founder & Technical Lead
-                    </p>
-                  </div>
+        {/* Values */}
+        <div>
+          <h2 style={{ font: "700 clamp(22px,3vw,28px)/1.3 Inter", letterSpacing: "-0.02em", margin: "0 0 24px" }}>
+            The Benevox way
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {[
+              { letter: "O", bg: "hsl(142 55% 45% / 0.14)", color: "hsl(142 45% 38%)", title: "Ownership", tagline: "If it's yours, it's yours.", body: "We take full responsibility for every project. Your success is our success." },
+              { letter: "S", bg: "hsl(38 75% 52% / 0.16)",  color: "hsl(30 60% 40%)",  title: "Speed",     tagline: "Ship fast, learn fast.",   body: "We move quickly without sacrificing quality. Time is your most valuable resource." },
+              { letter: "T", bg: "hsl(10 65% 55% / 0.14)",  color: "hsl(8 55% 44%)",   title: "Transparency", tagline: "No hiding problems.",  body: "Clear communication, honest updates. You always know where your project stands." },
+            ].map(v => (
+              <div key={v.letter} className="bvx-soft-card" style={{
+                display: "flex", gap: 20, background: "hsl(var(--home-card))",
+                borderRadius: 20, padding: 24, transition: "all .25s ease",
+              }}>
+                <div style={{
+                  width: 44, height: 44, borderRadius: "50%", background: v.bg,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  font: "600 15px/1 'Newsreader',serif", color: v.color, flexShrink: 0,
+                }}>
+                  {v.letter}
                 </div>
-
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Senior DevOps Engineer, Google Community Lead, and Serial
-                  Entrepreneur focused on solving African problems through
-                  technology.
-                </p>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  With years of experience building and scaling technical teams,
-                  Eno founded Benevox to bridge the gap between African talent and
-                  global opportunity.
-                </p>
+                <div>
+                  <h4 style={{ font: "700 16px/1.3 Inter", margin: "0 0 4px" }}>{v.title}</h4>
+                  <p style={{ font: "600 13px/1 Inter", fontStyle: "italic", color: v.color, margin: "0 0 8px" }}>{v.tagline}</p>
+                  <p style={{ font: "400 13px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{v.body}</p>
+                </div>
               </div>
-            </div>
-
-            {/* Right - Values */}
-            <div>
-              <span className="text-primary font-semibold tracking-wider uppercase text-sm">
-                Our Culture
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-8">
-                The Benevox Way
-              </h2>
-
-              <div className="space-y-6">
-                {values.map((value) => (
-                  <div
-                    key={value.title}
-                    className="group flex gap-5 p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
-                  >
-                    <div
-                      className={`flex-shrink-0 w-12 h-12 rounded-xl ${value.bgColor} flex items-center justify-center`}
-                    >
-                      <value.icon className={`h-6 w-6 ${value.iconColor}`} />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold mb-1">{value.title}</h4>
-                      <p className={`${value.quoteColor} font-medium text-sm mb-2`}>
-                        "{value.quote}"
-                      </p>
-                      <p className="text-muted-foreground text-sm">
-                        {value.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
-    </main>
+
+      <style>{`
+        @media (max-width: 768px) { .bvx-about-grid { grid-template-columns: 1fr !important; } }
+      `}</style>
+    </div>
   );
 }

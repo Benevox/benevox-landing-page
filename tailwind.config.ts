@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,10 +62,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         "brand-green": "hsl(var(--brand-green))",
-        "brand-gold": "hsl(var(--brand-gold))",
-        "brand-red": "hsl(var(--brand-red))",
-        "brand-brown": "hsl(var(--brand-brown))",
-        "brand-black": "hsl(var(--brand-black))",
+        "brand-gold":  "hsl(var(--brand-gold))",
+        "brand-rust":  "hsl(var(--brand-rust))",
+        "home-bg":     "hsl(var(--home-bg))",
+        "home-fg":     "hsl(var(--home-fg))",
+        "home-muted":  "hsl(var(--home-muted))",
+        "home-border": "hsl(var(--home-border))",
+        "home-card":   "hsl(var(--home-card))",
+        "home-card-2": "hsl(var(--home-card-2))",
       },
       borderRadius: {
         lg: "var(--radius)",

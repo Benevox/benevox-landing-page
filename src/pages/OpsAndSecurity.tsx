@@ -1,119 +1,143 @@
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import { Shield, Lock, Bot, UserCheck, Scale } from "lucide-react";
 
-const OpsAndSecurity = () => {
-  const agents = [
-    {
-      name: "Intake Agent",
-      role: "Analysis & Requirement Extraction",
-      description: "Parses client vision into structured data, ensuring zero loss of intent between business and engineering.",
-      icon: Bot,
-    },
-    {
-      name: "Scoping Agent",
-      role: "Architecture & Estimation",
-      description: "Verifies technical feasibility and maps requirements to the optimal technology stack and delivery timeline.",
-      icon: Bot,
-    },
-    {
-      name: "Risk Agent",
-      role: "Dependency & Bottleneck Detection",
-      description: "Monitors engineering flow to detect risks before they impact milestones. The primary safeguard for 'No Unverified Promises'.",
-      icon: Bot,
-    },
-  ];
+const agents = [
+  {
+    title: "Intake Agent",
+    role: "Analysis & extraction",
+    body: "Turns your vision into structured detail, so nothing gets lost in translation.",
+  },
+  {
+    title: "Scoping Agent",
+    role: "Architecture & estimation",
+    body: "Confirms feasibility and maps out the right stack and timeline.",
+  },
+  {
+    title: "Risk Agent",
+    role: "Dependency detection",
+    body: "Catches risks before they touch a milestone, backing our "no unverified promises" rule.",
+  },
+];
 
+const security = [
+  {
+    title: "SOC2-compliant environments",
+    body: "Every project runs in isolated, SOC2-compliant infrastructure with strict access controls by default.",
+  },
+  {
+    title: "Your IP stays yours",
+    body: "Every line of code, every asset, every document we make for your project transfers to you in full once it's done.",
+  },
+];
+
+export default function OpsAndSecurity() {
   return (
-    <main className="min-h-screen bg-background">
+    <div style={{
+      background: "hsl(var(--home-bg))", color: "hsl(var(--home-fg))",
+      fontFamily: "'Inter',sans-serif", minHeight: "100vh", position: "relative",
+    }}>
       <Navbar />
 
-      <section className="pt-32 pb-20 container mx-auto px-4">
-        {/* Hero Section */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter uppercase">
-            The Machine Specs
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            High-discipline delivery through automated pipelines and radical accountability.
-          </p>
-        </div>
+      <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
+        <div className="bvx-blob-1" style={{
+          position: "absolute", top: -100, right: -120, width: 420, height: 420,
+          borderRadius: "50%", background: "hsl(10 65% 55% / 0.12)", filter: "blur(90px)",
+        }} />
+      </div>
 
-        {/* 95/5 Quality Holdback */}
-        <div className="max-w-4xl mx-auto mb-32 p-12 rounded-2xl border border-brand-green/20 bg-brand-green/5">
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="w-24 h-24 rounded-full bg-brand-green/10 flex items-center justify-center flex-shrink-0">
-              <Scale className="h-10 w-10 text-brand-green" />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-4"> 70/30 Quality Holdback</h2>
-              <p className="text-xl text-foreground/80 leading-relaxed mb-6">
-                Our team payout logic is built on accountability. We hold back 30% of the total milestone payout until 30 days post-handover to ensure zero technical debt and absolute stability.
-              </p>
-              <div className="flex gap-4">
-                <div className="px-4 py-2 bg-brand-green/10 rounded-lg text-brand-green font-bold text-sm">ZERO DEBT</div>
-                <div className="px-4 py-2 bg-brand-green/10 rounded-lg text-brand-green font-bold text-sm">POST-SHIPPING SUPPORT</div>
-              </div>
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "96px 32px 64px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <h1 style={{ font: "800 clamp(32px,5vw,52px)/1.2 Inter", letterSpacing: "-0.03em", margin: "0 0 20px" }}>
+          How we{" "}
+          <span style={{ fontFamily: "'Newsreader',serif", fontStyle: "italic", fontWeight: 600, color: "hsl(142 45% 38%)" }}>
+            keep our word
+          </span>
+        </h1>
+        <p style={{ font: "400 17px/1.6 Inter", color: "hsl(var(--home-muted))", maxWidth: 560, margin: "0 auto" }}>
+          Disciplined delivery. Real accountability. Security that's built in, not bolted on.
+        </p>
+      </div>
+
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }}>
+        {/* Holdback */}
+        <div className="reveal" style={{
+          background: "hsl(38 75% 52% / 0.12)", borderRadius: 28, padding: 44,
+          marginBottom: 100, display: "flex", gap: 32, alignItems: "flex-start", flexWrap: "wrap",
+        }}>
+          <div style={{
+            width: 56, height: 56, borderRadius: "50%",
+            background: "hsl(38 75% 52% / 0.2)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            font: "600 20px/1 'Newsreader',serif", color: "hsl(30 60% 38%)", flexShrink: 0,
+          }}>
+            %
+          </div>
+          <div style={{ flex: 1, minWidth: 280 }}>
+            <h2 style={{ font: "700 24px/1.3 Inter", margin: "0 0 12px" }}>A 70/30 quality holdback</h2>
+            <p style={{ font: "400 15px/1.6 Inter", color: "hsl(var(--home-muted))", margin: "0 0 18px" }}>
+              We hold back 30% of every milestone until 30 days after handover. That's the accountability built into how we get paid, and it keeps everything stable and debt-free.
+            </p>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              {["Zero technical debt", "Post-launch support"].map(t => (
+                <span key={t} style={{
+                  background: "hsl(var(--home-card-2))", borderRadius: 999,
+                  padding: "8px 16px", font: "600 12px/1 Inter",
+                }}>{t}</span>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* AI Operations Layer */}
-        <div id="ai-operations" className="mb-32">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black uppercase tracking-tight mb-4">AI Operations Layer</h2>
-            <p className="text-xl text-muted-foreground">The machine's internal agents that drive the production line.</p>
+        {/* AI agents */}
+        <div id="ai-operations" className="reveal" style={{ marginBottom: 100 }}>
+          <div style={{ textAlign: "center", marginBottom: 40 }}>
+            <h2 style={{ font: "700 clamp(24px,3vw,32px)/1.25 Inter", letterSpacing: "-0.02em", margin: "0 0 12px" }}>
+              The team behind the scenes
+            </h2>
+            <p style={{ font: "400 15px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>
+              A few AI-assisted agents that keep our production line moving.
+            </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {agents.map((agent) => (
-              <div key={agent.name} className="p-8 rounded-2xl border border-border bg-card hover:border-brand-gold/50 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-6">
-                  <agent.icon className="h-6 w-6 text-brand-gold" />
+          <div className="bvx-grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20, marginBottom: 32 }}>
+            {agents.map(a => (
+              <div key={a.title} className="bvx-soft-card" style={{
+                background: "hsl(var(--home-card))", borderRadius: 22, padding: 28, transition: "all .25s ease",
+              }}>
+                <h3 style={{ font: "700 16px/1.3 Inter", margin: "0 0 4px" }}>{a.title}</h3>
+                <div style={{ font: "600 11px/1 Inter", textTransform: "uppercase", letterSpacing: "0.05em", color: "hsl(38 75% 45%)", marginBottom: 12 }}>
+                  {a.role}
                 </div>
-                <h3 className="text-xl font-bold mb-1">{agent.name}</h3>
-                <p className="text-brand-gold text-xs font-bold uppercase tracking-widest mb-4">{agent.role}</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  {agent.description}
-                </p>
+                <p style={{ font: "400 13px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{a.body}</p>
               </div>
             ))}
           </div>
-
-          {/* Human Accountability Rule */}
-          <div className="max-w-3xl mx-auto mt-16 p-8 rounded-xl border border-brand-red/20 bg-brand-red/5 flex items-start gap-6">
-            <UserCheck className="h-8 w-8 text-brand-red flex-shrink-0" />
+          <div style={{
+            background: "hsl(8 65% 50% / 0.1)", borderRadius: 20, padding: 26,
+            display: "flex", gap: 18, alignItems: "flex-start",
+          }}>
+            <div style={{ font: "700 18px/1 'Newsreader',serif", color: "hsl(8 55% 44%)" }}>!</div>
             <div>
-              <h3 className="text-lg font-bold text-brand-red mb-2 uppercase tracking-wide">The Human Accountability Rule</h3>
-              <p className="text-muted-foreground">
-                AI drafts, humans approve. Every automated output from the machine is verified by a human expert. No AI agent has the final authority on architectural commitments.
+              <h3 style={{ font: "700 14px/1 Inter", textTransform: "uppercase", letterSpacing: "0.03em", color: "hsl(8 55% 44%)", margin: "0 0 8px" }}>
+                Humans always approve
+              </h3>
+              <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>
+                AI drafts, but every output is checked by a person before it becomes a commitment.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Security & IP */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-32">
-          <div className="p-10 rounded-2xl border border-border">
-            <Shield className="h-10 w-10 text-brand-green mb-6" />
-            <h3 className="text-2xl font-bold mb-4">SOC2-Compliant Environments</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              All development occurs in isolated, SOC2-compliant cloud environments. We implement strict access controls and zero-trust networking as standard.
-            </p>
-          </div>
-          <div className="p-10 rounded-2xl border border-border">
-            <Lock className="h-10 w-10 text-brand-gold mb-6" />
-            <h3 className="text-2xl font-bold mb-4">IP Protection</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Strict legal and technical safeguards ensure that all IP generated during your project is transferred fully to you upon milestone completion.
-            </p>
-          </div>
+        {/* Security */}
+        <div className="reveal bvx-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 120 }}>
+          {security.map(s => (
+            <div key={s.title} style={{ background: "hsl(var(--home-card))", borderRadius: 22, padding: 32 }}>
+              <h3 style={{ font: "700 18px/1.3 Inter", margin: "0 0 12px" }}>{s.title}</h3>
+              <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{s.body}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
       <Footer />
-    </main>
+    </div>
   );
-};
-
-export default OpsAndSecurity;
+}
