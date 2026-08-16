@@ -15,7 +15,7 @@ const agents = [
   {
     title: "Risk Agent",
     role: "Dependency detection",
-    body: "Catches risks before they touch a milestone, backing our "no unverified promises" rule.",
+    body: 'Catches risks before they touch a milestone, backing our "no unverified promises" rule.',
   },
 ];
 
