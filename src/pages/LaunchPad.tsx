@@ -70,8 +70,12 @@ export default function LaunchPad() {
             Apply for LaunchPad
           </a>
           <a href="#how-it-works"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="bvx-btn-outline"
-            style={{ border: "1.5px solid hsl(var(--home-border))", color: "hsl(var(--home-fg))", font: "700 16px/1 Inter", padding: "17px 34px", borderRadius: 999, whiteSpace: "nowrap" }}>
+            style={{ border: "1.5px solid hsl(var(--home-border))", color: "hsl(var(--home-fg))", font: "700 16px/1 Inter", padding: "17px 34px", borderRadius: 999, whiteSpace: "nowrap", cursor: "pointer" }}>
             How it works
           </a>
         </div>
