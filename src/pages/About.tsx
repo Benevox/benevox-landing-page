@@ -43,28 +43,41 @@ export default function About() {
           </h2>
           <div style={{ background: "hsl(var(--home-card))", borderRadius: 24, padding: 32 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
-              {/* Founder photo placeholder */}
               <div style={{
-                width: 60, height: 60, borderRadius: "50%", flexShrink: 0,
+                width: 64, height: 64, borderRadius: "50%", flexShrink: 0, overflow: "hidden",
                 background: "hsl(142 55% 45% / 0.2)",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                font: "700 20px/1 'Newsreader',serif", color: "hsl(142 45% 38%)",
+                font: "700 22px/1 'Newsreader',serif", color: "hsl(142 45% 38%)",
               }}>
-                EP
+                PE
               </div>
               <div>
-                <h3 style={{ font: "700 17px/1.3 Inter", margin: 0 }}>Eno Peter</h3>
+                <h3 style={{ font: "700 18px/1.3 Inter", margin: 0 }}>Peter Eno</h3>
                 <p style={{ font: "500 13px/1 Inter", color: "hsl(var(--home-muted))", margin: "6px 0 0" }}>
-                  Founder & Technical Lead
+                  Founder
                 </p>
               </div>
             </div>
             <p style={{ font: "400 14px/1.65 Inter", color: "hsl(var(--home-muted))", margin: "0 0 14px" }}>
-              Senior DevOps Engineer, Google Community Lead, and serial entrepreneur focused on solving African problems through technology.
+              Senior Solutions Architect, DevOps Lead, and serial entrepreneur focused on guiding SMBs and enterprise clients through cloud transformations and digital restructuring.
             </p>
-            <p style={{ font: "400 14px/1.65 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>
-              He's spent years building and scaling technical teams. He started Benevox to close the gap between African talent and global opportunity, and he's still closing it.
+            <p style={{ font: "400 14px/1.65 Inter", color: "hsl(var(--home-muted))", margin: "0 0 20px" }}>
+              An AWS Certified DevOps Professional and Google Developer Alumni, Peter established Benevox to provide flexible, high-impact technical solutions across Africa—bridging the gap between high-level architectural strategy and hands-on infrastructure delivery.
             </p>
+            <div>
+              <a
+                href="https://linkedin.com/in/enopetero/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  font: "600 13px/1 Inter", color: "hsl(142 45% 38%)",
+                  textDecoration: "none"
+                }}
+              >
+                Connect on LinkedIn →
+              </a>
+            </div>
           </div>
         </div>
 
