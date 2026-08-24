@@ -1,95 +1,60 @@
-import {
-  FileSearch,
-  Users,
-  TrendingUp,
-  ShieldCheck,
-  ExternalLink,
-  Settings
-} from "lucide-react";
-
 const steps = [
   {
-    number: "01",
-    title: "Scoping & Architecture Review",
-    description: "We map your technical roadmap and verify feasibility upfront. No unvalidated promises.",
-    icon: FileSearch,
-    color: "text-brand-green border-brand-green/30 bg-brand-green/5",
+    n: "1", bg: "hsl(142 55% 45% / 0.14)", color: "hsl(142 45% 38%)",
+    title: "Let's talk scope",
+    body: "We map out what you need and confirm it's realistic before anything is promised.",
   },
   {
-    number: "02",
-    title: "Pod Assembly",
-    description: "We configure a dedicated team—Product Manager, Designer, Engineers, QA—customized to your goals.",
-    icon: Users,
-    color: "text-brand-gold border-brand-gold/30 bg-brand-gold/5",
+    n: "2", bg: "hsl(38 75% 52% / 0.16)", color: "hsl(30 60% 40%)",
+    title: "Meet your pod",
+    body: "A dedicated PM, designer, engineers, and QA, built around your goals.",
   },
   {
-    number: "03",
-    title: "Weekly Agile Sprints",
-    description: "We build in high-speed, one-week cycles with absolute transparency and pay-as-you-go control.",
-    icon: TrendingUp,
-    color: "text-brand-red border-brand-red/30 bg-brand-red/5",
+    n: "3", bg: "hsl(10 65% 55% / 0.14)", color: "hsl(8 55% 44%)",
+    title: "Weekly momentum",
+    body: "We ship in one-week sprints, so you always see real progress.",
   },
   {
-    number: "04",
-    title: "Continuous QA & Validation",
-    description: "Our QA engineers rigorously verify every single feature before release. Excellence is non-negotiable.",
-    icon: ShieldCheck,
-    color: "text-brand-green border-brand-green/30 bg-brand-green/5",
-  },
-  {
-    number: "05",
-    title: "Clean Handover",
-    description: "We deliver smooth, well-documented code, clean databases, and scalable infrastructure to your team.",
-    icon: ExternalLink,
-    color: "text-brand-gold border-brand-gold/30 bg-brand-gold/5",
-  },
-  {
-    number: "06",
-    title: "Ongoing Management & Scale",
-    description: "Optional: We can continue running, maintaining, and scaling your systems post-launch.",
-    icon: Settings,
-    color: "text-brand-red border-brand-red/30 bg-brand-red/5",
+    n: "4", bg: "hsl(142 55% 45% / 0.14)", color: "hsl(142 45% 38%)",
+    title: "Clean handover",
+    body: "Documented, tested, and ready for your team to run with.",
+    last: true,
   },
 ];
 
-export const HowItWorks = () => {
-  return (
-    <section className="py-24 bg-background border-t border-border">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <span className="text-brand-green font-bold uppercase tracking-widest text-sm mb-4 block">
-            The Delivery Blueprint
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6">
-            How It Works
-          </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed">
-            A high-discipline, structured software production process in plain English.
-          </p>
-        </div>
+export const HowItWorks = () => (
+  <div id="how-it-works" className="reveal" style={{ maxWidth: 900, margin: "140px auto 0", padding: "0 32px", position: "relative", zIndex: 1 }}>
+    <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto 60px" }}>
+      <h2 style={{ font: "700 clamp(28px,3.2vw,40px)/1.2 Inter", letterSpacing: "-0.02em", margin: "0 0 14px" }}>
+        How it works
+      </h2>
+      <p style={{ font: "400 17px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>
+        A simple, honest process with no surprises along the way.
+      </p>
+    </div>
 
-        {/* Steps Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {steps.map((step) => (
-            <div
-              key={step.number}
-              className="relative p-8 rounded-2xl border border-border bg-card hover:border-brand-green/20 transition-all duration-300 group"
-            >
-              <div className="flex justify-between items-start mb-6">
-                <div className={`p-3 rounded-xl border ${step.color}`}>
-                  <step.icon className="h-6 w-6" />
-                </div>
-                <span className="text-4xl font-black text-muted-foreground/20 group-hover:text-brand-green/20 transition-colors">
-                  {step.number}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">{step.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
+    <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+      {steps.map(s => (
+        <div key={s.n} style={{ display: "flex", gap: 28 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div style={{
+              width: 48, height: 48, borderRadius: "50%",
+              background: s.bg, color: s.color,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              font: "600 17px/1 'Newsreader',serif", flexShrink: 0,
+            }}>
+              {s.n}
             </div>
-          ))}
+            {!s.last && (
+              <div style={{ width: 2, flex: 1, background: "hsl(var(--home-border))", margin: "6px 0" }} />
+            )}
+          </div>
+          <div style={{ paddingBottom: s.last ? 0 : 44 }}>
+            <h3 style={{ font: "700 19px/1.3 Inter", margin: "0 0 8px" }}>{s.title}</h3>
+            <p style={{ font: "400 15px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{s.body}</p>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </div>
+);

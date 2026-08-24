@@ -46,40 +46,34 @@ export const WhyUs = () => {
               We eliminate the friction of scaling dev teams. By deploying standardized, pre-vetted pods under a rigorous operating system, we deliver product outcomes without the traditional recruitment headache.
             </p>
 
-            {/* Quick stats */}
-            <div className="grid grid-cols-2 gap-6 pt-6 border-t border-border">
-              <div>
-                <span className="text-4xl font-black text-brand-green block mb-1">4+ Hours</span>
-                <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider">Synchronous Overlap</span>
-              </div>
-              <div>
-                <span className="text-4xl font-black text-brand-gold block mb-1">100%</span>
-                <span className="text-xs text-muted-foreground uppercase font-bold tracking-wider">No-Waste Progress Billing</span>
-              </div>
-            </div>
+    {/* Why us split */}
+    <div className="bvx-why-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: 56, marginBottom: 120, alignItems: "center" }}>
+      <div>
+        <h2 style={{ font: "700 clamp(26px,3vw,36px)/1.25 Inter", letterSpacing: "-0.02em", margin: "0 0 18px" }}>
+          Why people choose to work with us
+        </h2>
+        <p style={{ font: "400 16px/1.65 Inter", color: "hsl(var(--home-muted))", margin: "0 0 28px" }}>
+          We take the friction out of scaling a team with real people, pre-vetted and ready, without the recruiting headache.
+        </p>
+        <div style={{ display: "flex", gap: 36, flexWrap: "wrap" }}>
+          <div>
+            <div style={{ font: "700 30px/1 'Newsreader',serif", color: "hsl(142 45% 38%)" }}>4+ hrs</div>
+            <div style={{ font: "600 12px/1.4 Inter", color: "hsl(var(--home-muted))", marginTop: 8 }}>Overlap with your day</div>
           </div>
-
-          {/* Cards Grid */}
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-            {valueProps.map((prop) => (
-              <div
-                key={prop.title}
-                className="p-6 rounded-2xl border border-border bg-card hover:border-brand-green/20 transition-all duration-300"
-              >
-                <div className={`p-3 rounded-xl inline-flex mb-4 ${prop.color}`}>
-                  <prop.icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{prop.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{prop.description}</p>
-              </div>
-            ))}
+          <div>
+            <div style={{ font: "700 30px/1 'Newsreader',serif", color: "hsl(30 60% 40%)" }}>100%</div>
+            <div style={{ font: "600 12px/1.4 Inter", color: "hsl(var(--home-muted))", marginTop: 8 }}>Pay for progress made</div>
           </div>
         </div>
-
       </div>
 
-      {/* Decorative subtle ambient light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-green/5 blur-[120px] rounded-full pointer-events-none z-0" />
-    </section>
-  );
-};
+      </div>
+    </div>
+
+    <style>{`
+      @media (max-width: 768px) {
+        .bvx-why-grid { grid-template-columns: 1fr !important; }
+      }
+    `}</style>
+  </div>
+);

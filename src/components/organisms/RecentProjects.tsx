@@ -1,125 +1,71 @@
-import { Activity, Network, ExternalLink, ArrowRight } from "lucide-react";
-import { Button } from "@/components/atoms/ui/button";
 import { Link } from "react-router-dom";
 
-const homepageProjects = [
+const projects = [
   {
-    title: "Bellcrest Family Clinic",
-    tagline: "UI/UX Modernization & Technical SEO Engine",
-    description: "Re-engineered a clinic's digital footprint to optimize patient intake and medical service discovery.",
-    outcome: "Injected semantic SEO structures combined with regional directory indexing to maximize local client acquisition.",
-    metric: "14-Day Delivery",
-    metricLabel: "From architecture to deployment",
-    tech: ["SEO Architecture", "WCAG Accessibility", "Next-Gen UI/UX"],
-    icon: Activity,
-    url: "https://bellcrestfamilyclinic.ca/",
-    logo: "/assets/portfolio/bellcrest-logo.avif",
+    id: "bellcrest",
+    label: "Bellcrest Family Clinic",
+    labelColor: "hsl(142 45% 38%)",
+    title: "A digital front door patients actually enjoy using",
+    body: "Re-engineered a clinic's website to make booking and discovery effortless.",
+    stat: "Delivered in 14 days",
+    /* Replace src with real image later */
+    imgSrc: "/assets/portfolio/bellcrest-hero.jpg",
+    imgAlt: "Bellcrest clinic website",
+    imgBg: "hsl(142 55% 45% / 0.15)",
   },
   {
-    title: "Alder Family Clinic",
-    tagline: "Edge Routing & Cloud Multi-Tenancy",
-    description: "Deployed a zero-downtime, multi-tenant system for disaster recovery and edge routing on limited server infrastructure.",
-    outcome: "Built a Cloudflare-First Proxy architecture to decouple DNS from physical hosts and route traffic using dynamic regex rules.",
-    metric: "Zero-Downtime DNS",
-    metricLabel: "With instant failovers",
-    tech: ["Edge Functions", "Dynamic SSL/TLS", "Regex Pattern Matching"],
-    icon: Network,
-    url: "https://alderfamilyclinic.ca/",
-    logo: "/assets/portfolio/alder-logo.png",
+    id: "alder",
+    label: "Alder Family Clinic",
+    labelColor: "hsl(30 60% 40%)",
+    title: "A site that never goes down, even under pressure",
+    body: "Built resilient, multi-region infrastructure with instant failover.",
+    stat: "Zero downtime, always on",
+    imgSrc: "/assets/portfolio/alder-hero.jpg",
+    imgAlt: "Alder clinic website",
+    imgBg: "hsl(38 75% 52% / 0.15)",
   },
 ];
 
-export const RecentProjects = () => {
-  return (
-    <section className="py-24 bg-background border-t border-border">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-brand-gold font-bold uppercase tracking-widest text-sm mb-4 block">
-            Concrete Proof
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6">
-            Recent Projects
-          </h2>
-          <p className="text-muted-foreground text-xl">
-            We don't talk abstract concepts. Here is what we've actually built and delivered.
-          </p>
-        </div>
+export const RecentProjects = () => (
+  <div className="reveal" style={{ maxWidth: 1180, margin: "140px auto 0", padding: "0 32px", position: "relative", zIndex: 1 }}>
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 44, flexWrap: "wrap", gap: 16 }}>
+      <h2 style={{ font: "700 clamp(28px,3.2vw,40px)/1.2 Inter", letterSpacing: "-0.02em", margin: 0 }}>
+        Recent projects
+      </h2>
+      <Link to="/portfolio" style={{ color: "hsl(142 45% 38%)", font: "700 15px/1 Inter", display: "flex", alignItems: "center", gap: 6 }}>
+        See the full story →
+      </Link>
+    </div>
 
-        {/* Projects Grid */}
-        <div className="grid gap-8 max-w-5xl mx-auto mb-16">
-          {homepageProjects.map((project) => (
-            <div
-              key={project.title}
-              className="p-8 md:p-12 rounded-3xl border border-border bg-card hover:border-brand-green/30 transition-all duration-300 flex flex-col md:flex-row gap-8 items-start md:items-center"
-            >
-              {/* Info Column */}
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-brand-green/10 rounded-xl text-brand-green">
-                    <project.icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-foreground">{project.title}</h3>
-                    <p className="text-brand-green text-xs font-bold uppercase tracking-widest">{project.tagline}</p>
-                  </div>
-                </div>
-
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Outcome focus */}
-                <div className="mb-6 p-5 rounded-xl bg-brand-green/5 border border-brand-green/10">
-                  <p className="text-sm font-bold text-brand-green uppercase tracking-wider mb-1">Business Outcome</p>
-                  <p className="text-foreground/90 font-medium italic text-sm">"{project.outcome}"</p>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span key={t} className="px-3 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Metric Column / Call to action */}
-              <div className="w-full md:w-64 flex-shrink-0 flex flex-col justify-between h-full bg-brand-green/5 border border-brand-green/10 rounded-2xl p-6 text-center md:text-left">
-                <div>
-                  <span className="text-3xl font-black text-foreground block mb-1">
-                    {project.metric}
-                  </span>
-                  <span className="text-xs text-muted-foreground block mb-6 leading-tight">
-                    {project.metricLabel}
-                  </span>
-                </div>
-                {project.url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full rounded-full border-brand-green/20 hover:border-brand-green/50 text-brand-green gap-2 hover:bg-brand-green/5"
-                    onClick={() => window.open(project.url, '_blank')}
-                  >
-                    Visit Live Site
-                    <ExternalLink className="h-3.5 w-3.5" />
-                  </Button>
-                )}
-              </div>
+    <div className="bvx-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+      {projects.map(p => (
+        <div key={p.id} className="bvx-soft-card" style={{
+          background: "hsl(var(--home-card))", borderRadius: 24,
+          overflow: "hidden", transition: "all .25s ease",
+        }}>
+          {/* Image slot */}
+          <div style={{
+            width: "100%", height: 200,
+            background: p.imgBg,
+            overflow: "hidden",
+          }}>
+            <img
+              src={p.imgSrc}
+              alt={p.imgAlt}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+            />
+          </div>
+          <div style={{ padding: 28 }}>
+            <div style={{ font: "700 12px/1 Inter", color: p.labelColor, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 10 }}>
+              {p.label}
             </div>
-          ))}
+            <h3 style={{ font: "700 20px/1.35 Inter", margin: "0 0 10px" }}>{p.title}</h3>
+            <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: "0 0 16px" }}>{p.body}</p>
+            <div style={{ font: "700 15px/1 Inter" }}>{p.stat}</div>
+          </div>
         </div>
-
-        {/* View All Works CTA */}
-        <div className="text-center">
-          <Button variant="outline" size="lg" className="rounded-xl border-border" asChild>
-            <Link to="/portfolio" className="inline-flex items-center gap-2">
-              Explore full technical portfolio
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </div>
+);

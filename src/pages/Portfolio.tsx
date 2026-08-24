@@ -1,136 +1,135 @@
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
-import { Database, Activity, Network, ExternalLink } from "lucide-react";
-import { Button } from "@/components/atoms/ui/button";
 
-const Portfolio = () => {
-  const projects = [
-    {
-      title: "NigComSat",
-      tagline: "IoT DashCom & Analytics",
-      description: "A nationwide satellite-enabled IoT dashboard for monitoring remote assets and infrastructure health.",
-      impact: "30% Efficiency Increase",
-      outcome: "Enabled nationwide data-driven agriculture and infrastructure monitoring via satellite telematics.",
-      tech: ["React", "PostgreSQL", "IoT Gateway", "Satellite API"],
-      icon: Database,
-    },
-    {
-      title: "Bellcrest Family Clinic",
-      tagline: "UI/UX Modernization & Technical SEO Engine",
-      description: "Overhauling an established clinical digital footprint to enhance patient intake and service discovery.",
-      impact: "14-Day Turnaround",
-      outcome: "Injected deep on-page semantic SEO tags combined with local map directory indexing to skyrocket local organic client capture.",
-      tech: ["Semantic SEO", "UI/UX Architecture", "WCAG Accessibility", "Map Indexing"],
-      icon: Activity,
-      url: "https://bellcrestfamilyclinic.ca/",
-      logo: "/assets/portfolio/bellcrest-logo.avif",
-      image: "/assets/portfolio/bellcrest-hero.jpg",
-    },
-    {
-      title: "Alder Family Clinic",
-      tagline: "Edge Routing & Cloud Multi-Tenancy",
-      description: "Deploying an app-level system for zero-downtime disaster recovery and multi-subdomain routing on constrained infrastructure.",
-      impact: "Zero-Downtime DNS",
-      outcome: "Decoupled DNS from traditional hosting by engineering a Cloudflare-First Proxy Architecture with dynamic edge redirect rules.",
-      tech: ["Cloudflare Edge", "DNS Routing", "SSL/TLS", "Regex Pattern Matching"],
-      icon: Network,
-      url: "https://alderfamilyclinic.ca/",
-      logo: "/assets/portfolio/alder-logo.png",
-      image: "/assets/portfolio/alder-hero.jpg",
-    },
-  ];
+const projects = [
+  {
+    id: "nigcomsat",
+    label: "NigComSat",
+    labelColor: "hsl(142 45% 38%)",
+    title: "A nationwide dashboard for satellite-enabled monitoring",
+    body: "An IoT dashboard tracking remote assets and infrastructure health across the country.",
+    stat: "30% efficiency increase",
+    tags: ["React", "IoT Gateway"],
+    imgSrc: "",
+    imgBg: "hsl(142 55% 45% / 0.15)",
+  },
+  {
+    id: "bellcrest",
+    label: "Bellcrest Family Clinic",
+    labelColor: "hsl(30 60% 40%)",
+    title: "A digital front door patients actually enjoy using",
+    body: "A UI/UX overhaul and technical SEO engine to improve patient intake and discovery.",
+    stat: "Delivered in 14 days",
+    tags: ["SEO", "Accessibility"],
+    url: "https://bellcrestfamilyclinic.ca/",
+    imgSrc: "/assets/portfolio/bellcrest-hero.jpg",
+    imgBg: "hsl(38 75% 52% / 0.15)",
+  },
+  {
+    id: "alder",
+    label: "Alder Family Clinic",
+    labelColor: "hsl(8 55% 44%)",
+    title: "A site that never goes down, even under pressure",
+    body: "Zero-downtime, multi-region infrastructure with instant failover on constrained hosting.",
+    stat: "Zero downtime, always on",
+    tags: ["Edge Routing", "SSL/TLS"],
+    url: "https://alderfamilyclinic.ca/",
+    imgSrc: "/assets/portfolio/alder-hero.jpg",
+    imgBg: "hsl(8 55% 44% / 0.12)",
+  },
+  {
+    id: "vgclinic",
+    label: "VG Clinic",
+    labelColor: "hsl(142 45% 38%)",
+    title: "A warm brand refresh with booking built in",
+    body: "A full identity refresh and modern, mobile-responsive site for a family medicine clinic.",
+    stat: "Delivered in 14 days",
+    tags: ["Brand Identity", "Booking System"],
+    url: "https://vgclinic.net/",
+    imgSrc: "",
+    imgBg: "hsl(142 55% 45% / 0.12)",
+  },
+];
 
+export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-background">
+    <div style={{
+      background: "hsl(var(--home-bg))", color: "hsl(var(--home-fg))",
+      fontFamily: "'Inter',sans-serif", minHeight: "100vh", position: "relative",
+    }}>
       <Navbar />
 
-      <section className="pt-32 pb-20 container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter uppercase">
-            Our Works
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            Case studies of precision engineering and technical impact.
-          </p>
-        </div>
+      <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }}>
+        <div className="bvx-blob-1" style={{
+          position: "absolute", top: -100, right: -120, width: 420, height: 420,
+          borderRadius: "50%", background: "hsl(142 55% 45% / 0.14)", filter: "blur(90px)",
+        }} />
+      </div>
 
-        <div className="grid gap-12 max-w-6xl mx-auto mb-32">
-          {projects.map((project) => (
-            <div key={project.title} className="group relative rounded-3xl border border-border bg-card overflow-hidden hover:border-brand-green/30 transition-all duration-500">
-              <div className="flex flex-col lg:flex-row">
-                <div className="p-10 lg:p-16 flex-1">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-xl bg-brand-green/10">
-                      {project.logo ? (
-                        <img src={project.logo} alt={`${project.title} logo`} className="h-6 w-6 object-contain" />
-                      ) : (
-                        <project.icon className="h-6 w-6 text-brand-green" />
-                      )}
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-black">{project.title}</h2>
-                      <p className="text-brand-green font-bold text-sm uppercase tracking-widest">{project.tagline}</p>
-                    </div>
-                  </div>
+      {/* Page header */}
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "96px 32px 56px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <h1 style={{ font: "800 clamp(34px,5vw,54px)/1.15 Inter", letterSpacing: "-0.03em", margin: "0 0 20px" }}>
+          Our{" "}
+          <span style={{ fontFamily: "'Newsreader',serif", fontStyle: "italic", fontWeight: 600, color: "hsl(142 45% 38%)" }}>
+            works
+          </span>
+        </h1>
+        <p style={{ font: "400 17px/1.6 Inter", color: "hsl(var(--home-muted))", maxWidth: 560, margin: "0 auto" }}>
+          Real problems, solved for real businesses. Here's the proof.
+        </p>
+      </div>
 
-                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-10 p-6 rounded-xl bg-brand-green/5 border border-brand-green/10">
-                    <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-2">Technical Impact</h3>
-                    <p className="text-2xl font-black mb-2">{project.impact}</p>
-                    <p className="text-foreground/80 italic">"{project.outcome}"</p>
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-between gap-6">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((t) => (
-                        <span key={t} className="px-3 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                    {project.url && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="rounded-full border-brand-green/20 hover:border-brand-green/50 text-brand-green gap-2"
-                        onClick={() => window.open(project.url, '_blank')}
-                      >
-                        Visit Website
-                        <ExternalLink className="h-3 w-3" />
-                      </Button>
-                    )}
-                  </div>
+      {/* Portfolio grid */}
+      <div className="reveal bvx-grid-2" style={{
+        maxWidth: 1100, margin: "0 auto", padding: "0 32px 120px",
+        display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24,
+        position: "relative", zIndex: 1,
+      }}>
+        {projects.map(p => (
+          <div key={p.id} className="bvx-soft-card" style={{
+            background: "hsl(var(--home-card))", borderRadius: 26,
+            overflow: "hidden", transition: "all .25s ease",
+            display: "flex", flexDirection: "column",
+          }}>
+            {/* Image */}
+            <div style={{ width: "100%", height: 300, background: p.imgBg, overflow: "hidden", flexShrink: 0 }}>
+              {p.imgSrc && (
+                <img src={p.imgSrc} alt={p.label}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+                />
+              )}
+            </div>
+            {/* Content */}
+            <div style={{ padding: 32, display: "flex", flexDirection: "column", flex: 1 }}>
+              <div style={{ font: "700 12px/1 Inter", textTransform: "uppercase", letterSpacing: "0.04em", color: p.labelColor, marginBottom: 10 }}>
+                {p.label}
+              </div>
+              <h2 style={{ font: "700 20px/1.35 Inter", margin: "0 0 10px" }}>{p.title}</h2>
+              <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: "0 0 20px", flex: 1 }}>{p.body}</p>
+              <div style={{ font: "700 15px/1 Inter", marginBottom: 16 }}>{p.stat}</div>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {p.tags.map(t => (
+                    <span key={t} style={{
+                      background: "hsl(var(--home-card-2))", borderRadius: 999,
+                      padding: "6px 14px", font: "600 12px/1 Inter", color: "hsl(var(--home-muted))",
+                    }}>{t}</span>
+                  ))}
                 </div>
-
-                <div className="lg:w-[40%] bg-muted/30 border-l border-border flex items-center justify-center relative overflow-hidden">
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  ) : (
-                    <>
-                      <project.icon className="w-64 h-64 text-foreground/5 absolute -right-16 -bottom-16" />
-                      <div className="relative z-10 text-center p-12">
-                        <p className="text-sm font-bold uppercase tracking-widest mb-4 opacity-50">Confidentiality: Tier 1</p>
-                        <p className="text-muted-foreground text-sm max-w-[200px]">Technical architecture details available under NDA for scoping sessions.</p>
-                      </div>
-                    </>
-                  )}
-                </div>
+                {p.url && (
+                  <a href={p.url} target="_blank" rel="noopener noreferrer"
+                    style={{ color: p.labelColor, font: "700 13px/1 Inter" }}>
+                    Visit website →
+                  </a>
+                )}
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
 
       <Footer />
-    </main>
+    </div>
   );
-};
-
-export default Portfolio;
+}
