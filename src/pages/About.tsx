@@ -43,14 +43,17 @@ export default function About() {
           </h2>
           <div style={{ background: "hsl(var(--home-card))", borderRadius: 24, padding: 32 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
-              <div style={{
-                width: 64, height: 64, borderRadius: "50%", flexShrink: 0, overflow: "hidden",
-                background: "hsl(142 55% 45% / 0.2)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                font: "700 22px/1 'Newsreader',serif", color: "hsl(142 45% 38%)",
-              }}>
-                PE
-              </div>
+              <img
+                src="/assets/peter-eno.png"
+                alt="Peter Eno"
+                style={{
+                  width: 64,
+                  height: 64,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  flexShrink: 0,
+                }}
+              />
               <div>
                 <h3 style={{ font: "700 18px/1.3 Inter", margin: 0 }}>Peter Eno</h3>
                 <p style={{ font: "500 13px/1 Inter", color: "hsl(var(--home-muted))", margin: "6px 0 0" }}>
