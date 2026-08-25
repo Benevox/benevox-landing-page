@@ -70,10 +70,13 @@ export const WhyUs = () => {
       </div>
     </div>
 
+      </div>
+
     <style>{`
       @media (max-width: 768px) {
         .bvx-why-grid { grid-template-columns: 1fr !important; }
       }
     `}</style>
   </div>
+    </section>
 );
