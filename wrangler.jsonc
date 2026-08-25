@@ -1,7 +1,8 @@
 {
   "name": "benevox-landing-page",
-  "main": "src/index.ts",
+  "type": "service",
   "compatibility_date": "2026-08-20",
+  "main": "src/index.ts",
   "assets": {
     "directory": "./dist"
   }
