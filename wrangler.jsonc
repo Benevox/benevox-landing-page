@@ -1,6 +1,5 @@
 {
   "name": "benevox-landing-page",
-  "type": "service",
   "compatibility_date": "2026-08-20",
   "main": "src/index.ts",
   "assets": {
@@ -9,7 +8,6 @@
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
-    "redact_query_string": false,
     "logs": {
       "enabled": true,
       "head_sampling_rate": 1,
