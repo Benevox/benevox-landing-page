@@ -80,3 +80,4 @@ export const WhyUs = () => {
   </div>
     </section>
 );
+};
