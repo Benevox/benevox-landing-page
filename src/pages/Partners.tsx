@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/organisms/Navbar";
 import { Footer } from "@/components/organisms/Footer";
 
-export default function Accelerator() {
+export default function Partners() {
   return (
     <div style={{
       background: "hsl(var(--home-bg))", color: "hsl(var(--home-fg))",
@@ -24,13 +24,13 @@ export default function Accelerator() {
         }}>
           <span className="bvx-dot" style={{ width: 7, height: 7, borderRadius: "50%", background: "hsl(38 75% 52%)" }} />
           <span style={{ font: "600 13px/1 Inter", color: "hsl(30 60% 38%)", textTransform: "uppercase", letterSpacing: "0.04em" }}>
-            New program
+            For cloud partners
           </span>
         </div>
         <h1 style={{ font: "800 clamp(30px,5vw,50px)/1.2 Inter", letterSpacing: "-0.03em", margin: "0 0 20px" }}>
-          Benevox{" "}
+          Cloud-ready African startups,{" "}
           <span style={{ fontFamily: "'Newsreader',serif", fontStyle: "italic", fontWeight: 600, color: "hsl(38 70% 45%)" }}>
-            Startup Accelerator
+            vetted for you
           </span>
         </h1>
         <p style={{ font: "400 17px/1.6 Inter", color: "hsl(var(--home-muted))", maxWidth: 600, margin: "0 auto 14px" }}>
@@ -76,6 +76,29 @@ export default function Accelerator() {
                 <h3 style={{ font: "700 18px/1.3 Inter", margin: "0 0 6px" }}>{s.title}</h3>
                 <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{s.body}</p>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What partners get */}
+      <div className="reveal" style={{ maxWidth: 900, margin: "80px auto 0", padding: "0 32px", position: "relative", zIndex: 1 }}>
+        <h2 style={{ textAlign: "center", font: "700 clamp(24px,3vw,32px)/1.25 Inter", letterSpacing: "-0.02em", margin: "0 0 12px" }}>
+          What AWS and Google partner teams get
+        </h2>
+        <p style={{ textAlign: "center", font: "400 15px/1.6 Inter", color: "hsl(var(--home-muted))", maxWidth: 560, margin: "0 auto 36px" }}>
+          A shorter path from first conversation to a startup that can actually move onto your platform.
+        </p>
+        <div className="bvx-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+          {[
+            { t: "Pre-qualified startups", b: "Founders are vetted before we introduce them, so your team spends time on businesses that are ready to scale." },
+            { t: "Foundations in place", b: "Website, legal foundation, social pages and branding are prepared before the cloud conversation starts." },
+            { t: "Engineering support", b: "Benevox pods can handle migration and build work through fixed-scope, per-sprint or hybrid engagements." },
+            { t: "Clear accountability", b: "Work is validated before it is promised, and humans approve every commitment. See our operating rules." },
+          ].map(x => (
+            <div key={x.t} className="bvx-soft-card" style={{ background: "hsl(var(--home-card))", borderRadius: 22, padding: 26 }}>
+              <h3 style={{ font: "700 17px/1.3 Inter", margin: "0 0 8px" }}>{x.t}</h3>
+              <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{x.b}</p>
             </div>
           ))}
         </div>

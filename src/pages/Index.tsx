@@ -7,6 +7,8 @@ import { HowItWorks } from "@/components/organisms/HowItWorks";
 import { RecentProjects } from "@/components/organisms/RecentProjects";
 import { WhyUs } from "@/components/organisms/WhyUs";
 import { ModelsSummary } from "@/components/organisms/ModelsSummary";
+import { LaunchPadSection } from "@/components/organisms/LaunchPadSection";
+import { CtaSection } from "@/components/organisms/CtaSection";
 import { Footer } from "@/components/organisms/Footer";
 
 const Index = () => {
@@ -38,11 +40,13 @@ const Index = () => {
       </div>
 
       <Hero />
-      <PlugInSystem />
-      <HowItWorks />
       <RecentProjects />
-      <WhyUs />
+      <LaunchPadSection />
+      <HowItWorks />
       <ModelsSummary />
+      <PlugInSystem />
+      <WhyUs />
+      <CtaSection />
       <Footer />
 
       {/* LaunchPad popup */}

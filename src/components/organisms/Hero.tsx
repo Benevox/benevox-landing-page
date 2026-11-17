@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { BOOKING_URL } from "@/lib/cta";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => (
@@ -31,7 +33,7 @@ export const Hero = () => (
         padding: "9px 18px", marginBottom: 36,
       }}>
         <span className="bvx-dot" style={{ width: 7, height: 7, borderRadius: "50%", background: "hsl(142 55% 45%)" }} />
-        <span style={{ font: "600 13px/1 Inter", color: "hsl(142 45% 36%)" }}>Now onboarding new clients</span>
+        <span style={{ font: "600 13px/1 Inter", color: "hsl(142 45% 36%)" }}>Free landing page and booking system, hosted free for a year</span>
       </div>
 
       {/* Headline */}
@@ -39,7 +41,7 @@ export const Hero = () => (
         font: "800 clamp(38px,5.5vw,70px)/1.12 Inter",
         letterSpacing: "-0.03em", margin: "0 0 26px",
       }}>
-        Ship your product with a team that feels like{" "}
+        A working website or product in weeks, built by a team that feels like{" "}
         <br />
         <span style={{
           fontFamily: "'Newsreader', serif", fontStyle: "italic",
@@ -54,14 +56,14 @@ export const Hero = () => (
         font: "400 19px/1.65 Inter", color: "hsl(var(--home-muted))",
         maxWidth: 600, margin: "0 auto 40px",
       }}>
-        We plug in real engineers, designers, and product managers. Working software ships in weeks. Not months.
+        Start with LaunchPad: we design, deploy and host your site free for a year. Need more? Real engineers, designers and product managers plug in and ship in weeks, not months.
       </p>
 
       {/* CTAs */}
       <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
         <a
           className="bvx-btn-primary"
-          href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
+          href={BOOKING_URL}
           target="_blank" rel="noopener noreferrer"
           style={{
             background: "hsl(142 50% 40%)", color: "#fff",
@@ -69,19 +71,19 @@ export const Hero = () => (
             borderRadius: 999, transition: "all .2s ease", whiteSpace: "nowrap",
           }}
         >
-          Talk to us
+          Book a free call
         </a>
-        <a
+        <Link
           className="bvx-btn-outline"
-          href="#how-it-works"
+          to="/launchpad"
           style={{
             border: "1.5px solid hsl(var(--home-border))", color: "hsl(var(--home-fg))",
             font: "700 16px/1 Inter", padding: "17px 34px",
             borderRadius: 999, transition: "all .2s ease", whiteSpace: "nowrap",
           }}
         >
-          See how it works
-        </a>
+          See LaunchPad
+        </Link>
       </div>
     </div>
   </div>

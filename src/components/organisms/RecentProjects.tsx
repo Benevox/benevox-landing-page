@@ -62,7 +62,8 @@ export const RecentProjects = () => (
             </div>
             <h3 style={{ font: "700 20px/1.35 Inter", margin: "0 0 10px" }}>{p.title}</h3>
             <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: "0 0 16px" }}>{p.body}</p>
-            <div style={{ font: "700 15px/1 Inter" }}>{p.stat}</div>
+            <div style={{ font: "700 15px/1 Inter", marginBottom: 14 }}>{p.stat}</div>
+            <Link to={`/work/${p.id}`} style={{ color: "hsl(142 45% 38%)", font: "700 14px/1 Inter" }}>Read the case study →</Link>
           </div>
         </div>
       ))}
