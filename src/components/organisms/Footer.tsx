@@ -5,7 +5,7 @@ const resources = [
   { label: "Engagement models",   href: "/models"           },
   { label: "How we work",         href: "/ops-and-security" },
   { label: "Our work",            href: "/portfolio"        },
-  { label: "Accelerator",         href: "/accelerator"      },
+  { label: "For cloud partners",  href: "/partners"         },
   { label: "LaunchPad",           href: "/launchpad"        },
 ];
 const company = [

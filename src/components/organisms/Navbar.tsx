@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { BOOKING_URL } from "@/lib/cta";
 import benevoxLogo from "@/assets/benevox-logo.png";
 
 const navLinks = [
-  { label: "Models",   href: "/models",            key: "models"   },
-  { label: "Work",     href: "/portfolio",          key: "work"     },
-  { label: "Careers",  href: "/careers",            key: "careers"  },
-  { label: "About",    href: "/about",              key: "about"    },
+  { label: "LaunchPad", href: "/launchpad", key: "launchpad" },
+  { label: "Services",  href: "/models",    key: "models"    },
+  { label: "Work",      href: "/portfolio", key: "work"      },
+  { label: "About",     href: "/about",     key: "about"     },
 ];
 
 export const Navbar = () => {
@@ -161,7 +162,7 @@ export const Navbar = () => {
             </button>
 
             <a
-              href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
+              href={BOOKING_URL}
               target="_blank" rel="noopener noreferrer"
               className="bvx-btn-primary"
               style={{
@@ -171,7 +172,7 @@ export const Navbar = () => {
                 transition: "all .2s ease",
               }}
             >
-              Talk to us
+              Book a free call
             </a>
 
             {/* Hamburger */}
@@ -213,7 +214,7 @@ export const Navbar = () => {
               </Link>
             ))}
             <a
-              href="https://calendar.app.google/VT6CAYhjffCPbTfv5"
+              href={BOOKING_URL}
               target="_blank" rel="noopener noreferrer"
               style={{
                 background: "hsl(142 50% 40%)", color: "#fff",
@@ -221,7 +222,7 @@ export const Navbar = () => {
                 borderRadius: 999, textAlign: "center",
               }}
             >
-              Talk to us
+              Book a free call
             </a>
           </div>
         )}
