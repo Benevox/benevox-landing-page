@@ -19,13 +19,13 @@ export default function AppHome() {
         <h1 style={{ font: "700 30px/1.2 Inter", margin: "0 0 28px" }}>Your tools</h1>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 20 }}>
           {tools.map(t => (
-            <div key={t.slug} style={{ background: "hsl(var(--home-card))", borderRadius: 20, padding: 24 }}>
+            <Link key={t.slug} to={`/app/${t.slug}`} style={{ display: "block", background: "hsl(var(--home-card))", borderRadius: 20, padding: 24 }}>
               <div style={{ font: "700 12px Inter", textTransform: "uppercase", letterSpacing: "0.04em", color: "hsl(142 45% 38%)", marginBottom: 8 }}>
                 {t.audience} · {t.status}
               </div>
               <h2 style={{ font: "700 20px/1.3 Inter", margin: "0 0 8px" }}>{t.name}</h2>
               <p style={{ font: "400 14px/1.6 Inter", color: "hsl(var(--home-muted))", margin: 0 }}>{t.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </main>

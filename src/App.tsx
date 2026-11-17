@@ -8,6 +8,7 @@ import { AuthProvider } from "./app/AuthProvider";
 import { ProtectedRoute } from "./app/ProtectedRoute";
 import LoginPage from "./app/LoginPage";
 import AppHome from "./app/AppHome";
+import ToolPage from "./app/ToolPage";
 import Analytics from "./components/Analytics";
 import Index from "./pages/Index";
 import Careers from "./pages/Careers";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/app/login" element={<LoginPage />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/app" element={<AppHome />} />
+            <Route path="/app/:slug" element={<ToolPage />} />
           </Route>
           <Route path="/careers" element={<Careers />} />
           <Route path="/about" element={<About />} />
