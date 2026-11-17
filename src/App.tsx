@@ -4,6 +4,11 @@ import { TooltipProvider } from "@/components/atoms/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import FloatingWhatsApp from "./components/molecules/FloatingWhatsApp";
+import { AuthProvider } from "./app/AuthProvider";
+import { ProtectedRoute } from "./app/ProtectedRoute";
+import LoginPage from "./app/LoginPage";
+import AppHome from "./app/AppHome";
+import ToolPage from "./app/ToolPage";
 import Analytics from "./components/Analytics";
 import Index from "./pages/Index";
 import Careers from "./pages/Careers";
@@ -23,6 +28,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <AuthProvider>
       <BrowserRouter>
         <Analytics />
         <FloatingWhatsApp />
@@ -34,6 +40,11 @@ const App = () => (
           <Route path="/partners" element={<Partners />} />
           <Route path="/accelerator" element={<Navigate to="/partners" replace />} />
           <Route path="/work/:slug" element={<CaseStudy />} />
+          <Route path="/app/login" element={<LoginPage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/app" element={<AppHome />} />
+            <Route path="/app/:slug" element={<ToolPage />} />
+          </Route>
           <Route path="/careers" element={<Careers />} />
           <Route path="/about" element={<About />} />
           <Route path="/launchpad" element={<LaunchPad />} />
@@ -41,6 +52,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </AuthProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
