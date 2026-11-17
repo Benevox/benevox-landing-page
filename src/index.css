@@ -101,8 +101,7 @@
 
 /* ── Cursor ── */
 @media (pointer:fine) {
-  body { cursor: none; }
-  a, button { cursor: none; }
+  body:has(.bvx-cursor-dot), body:has(.bvx-cursor-dot) a, body:has(.bvx-cursor-dot) button { cursor: none; }
 }
 .bvx-cursor-dot {
   position:fixed; top:0; left:0; width:10px; height:10px;
