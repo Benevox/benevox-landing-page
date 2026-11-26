@@ -40,8 +40,7 @@ export default function Partners() {
           A good fit for cloud partners like AWS and Google looking for migration-ready African businesses.
         </p>
         <a
-          href="https://forms.gle/MZ1a3xMPknHJjJo7A"
-          target="_blank" rel="noopener noreferrer"
+          href="/contact?kind=partner"
           className="bvx-btn-primary"
           style={{
             display: "inline-block", background: "hsl(38 70% 45%)", color: "#fff",
@@ -113,8 +112,7 @@ export default function Partners() {
           Help us get more African startups cloud-ready, and we'll connect you with the ones worth your time.
         </p>
         <a
-          href="https://forms.gle/MZ1a3xMPknHJjJo7A"
-          target="_blank" rel="noopener noreferrer"
+          href="/contact?kind=partner"
           className="bvx-btn-primary"
           style={{
             display: "inline-block", background: "hsl(38 70% 45%)", color: "#fff",

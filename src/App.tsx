@@ -8,6 +8,8 @@ import { AuthProvider } from "./app/AuthProvider";
 import { ProtectedRoute } from "./app/ProtectedRoute";
 import LoginPage from "./app/LoginPage";
 import AppHome from "./app/AppHome";
+import AppEntry from "./app/AppEntry";
+import Contact from "./pages/Contact";
 import ToolPage from "./app/ToolPage";
 import Analytics from "./components/Analytics";
 import Index from "./pages/Index";
@@ -42,9 +44,11 @@ const App = () => (
           <Route path="/work/:slug" element={<CaseStudy />} />
           <Route path="/app/login" element={<LoginPage />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="/app" element={<AppHome />} />
+            <Route path="/app" element={<AppEntry />} />
+            <Route path="/app/tools" element={<AppHome />} />
             <Route path="/app/:slug" element={<ToolPage />} />
           </Route>
+          <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/about" element={<About />} />
           <Route path="/launchpad" element={<LaunchPad />} />
